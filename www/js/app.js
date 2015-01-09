@@ -299,7 +299,7 @@ sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
 });}
     function uploadPhoto_photo(imageURI) {
       var deviceid=device.uuid;
-        navigator.notification.activityStart("RococoPhoto", "uploading photo");
+        navigator.notification.activityStart("pridebbs", "uploading photo");
         var options = new FileUploadOptions();
         options.fileKey="profile_image";
         options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
