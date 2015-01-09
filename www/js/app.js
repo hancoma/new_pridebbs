@@ -95,7 +95,7 @@ function json_call(reg_id) {
       var reg_id=reg_id;
       var deviceid=device.uuid;
       // gcm reg_id 등록  
-         $.post("http://m.rococophoto.net/gcm_reg_app.php",
+         $.post("http://m.pridebbs.com/gcm_reg_app.php",
    {
     reg_id:reg_id,
     deviceid:deviceid
@@ -111,7 +111,7 @@ function json_call(reg_id) {
 function left_menu() {
  
      $( document ).ready(function() {
-                    $.post("http://m.rococophoto.net/left_menu.php",
+                    $.post("http://m.pridebbs.com/left_menu.php",
                {
                    
                  
@@ -135,7 +135,7 @@ var link;
 function goHref(url) {
   var url=url;
   var uuid=device.uuid;
-  url="http://m.rococophoto.net"+url+"&uuid="+uuid;
+  url="http://m.pridebbs.com"+url+"&uuid="+uuid;
   var ref = window.open(url, '_blank', 'location=no');
   ref.addEventListener('loadstart', function(event) { 
     
@@ -168,7 +168,7 @@ function getpage(uuid,page) {
         // uuid는 기기 번호 
     var uuid=uuid;
     var page=page;
-    var url="http://m.rococophoto.net/"+page+".php";
+    var url="http://m.pridebbs.com/"+page+".php";
  $.post(url,
    {
        
@@ -206,7 +206,7 @@ function check_uuid (deviceid) {
                 
         
 
-                     $.post("http://m.rococophoto.net/check_uuid_app.php",
+                     $.post("http://m.pridebbs.com/check_uuid_app.php",
        {
                 deviceid:deviceid
        },
@@ -242,7 +242,7 @@ function onConfirm(buttonIndex) {
     var btn=buttonIndex;
     if (btn==1) {
 
-      $.post("http://m.rococophoto.net/logout_app.php",
+      $.post("http://m.pridebbs.com/logout_app.php",
        {
                 deviceid:uuid
        },
@@ -314,7 +314,7 @@ sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
         options.params = params;
         options.chunkedMode = false;
         var ft = new FileTransfer();
-        ft.upload(imageURI, "http://m.rococophoto.net/upload_org.php", win_photo, fail, options);
+        ft.upload(imageURI, "http://m.pridebbs.com/upload_org.php", win_photo, fail, options);
     }
 
     function win_photo(r) {
@@ -345,7 +345,7 @@ function showPosition(position)
   var uuid=device.uuid;
  
   if (x) {
-   $.post("http://m.rococophoto.net/gps_update_app.php",
+   $.post("http://m.pridebbs.com/gps_update_app.php",
    {
     y:y,
     x:x,
@@ -364,7 +364,7 @@ right_menu();
 
  $( document ).ready(function() {
 
-  $.post("http://m.rococophoto.net/right_menu_app.php",
+  $.post("http://m.pridebbs.com/right_menu_app.php",
    {
       deviceid:deviceid
 
